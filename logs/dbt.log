@@ -1,0 +1,49 @@
+[0m14:51:21.350340 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f50e91aead0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f50e742beb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f50e7429fc0>]}
+
+
+============================== 14:51:21.351985 | 335d43e7-cee8-46b1-889d-2a37524801cd ==============================
+[0m14:51:21.351985 [info ] [MainThread]: Running with dbt=1.7.7
+[0m14:51:21.352416 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': '/home/ricardogooseman/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init northwinds_dbt', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:51:21.352931 [debug] [MainThread]: Starter project path: /home/ricardogooseman/jigsaw/dbt-core-setup-northwinds/codebase/venv/lib/python3.10/site-packages/dbt/include/starter_project
+[0m14:51:21.354335 [info ] [MainThread]: 
+Your new dbt project "northwinds_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m14:51:21.354748 [info ] [MainThread]: Setting up your profile.
+[0m14:51:55.423764 [error] [MainThread]: Encountered an error:
+
+[0m14:51:55.426404 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/ricardogooseman/jigsaw/dbt-core-setup-northwinds/codebase/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/ricardogooseman/jigsaw/dbt-core-setup-northwinds/codebase/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ricardogooseman/jigsaw/dbt-core-setup-northwinds/codebase/venv/lib/python3.10/site-packages/dbt/cli/main.py", line 515, in init
+    results = task.run()
+  File "/home/ricardogooseman/jigsaw/dbt-core-setup-northwinds/codebase/venv/lib/python3.10/site-packages/dbt/task/init.py", line 344, in run
+    self.setup_profile(profile_name)
+  File "/home/ricardogooseman/jigsaw/dbt-core-setup-northwinds/codebase/venv/lib/python3.10/site-packages/dbt/task/init.py", line 263, in setup_profile
+    adapter = self.ask_for_adapter_choice()
+  File "/home/ricardogooseman/jigsaw/dbt-core-setup-northwinds/codebase/venv/lib/python3.10/site-packages/dbt/task/init.py", line 244, in ask_for_adapter_choice
+    numeric_choice = click.prompt(prompt_msg, type=click.INT)
+  File "/home/ricardogooseman/jigsaw/dbt-core-setup-northwinds/codebase/venv/lib/python3.10/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/home/ricardogooseman/jigsaw/dbt-core-setup-northwinds/codebase/venv/lib/python3.10/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m14:51:55.445607 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 34.12915, "process_user_time": 1.965295, "process_kernel_time": 0.100011, "process_mem_max_rss": "89956", "process_in_blocks": "64", "process_out_blocks": "72", "command_success": false}
+[0m14:51:55.446970 [debug] [MainThread]: Command `dbt init` failed at 14:51:55.446599 after 34.13 seconds
+[0m14:51:55.447985 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f50e91aead0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f50e742a380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f50e7429fc0>]}
+[0m14:51:55.448951 [debug] [MainThread]: Flushing usage events
